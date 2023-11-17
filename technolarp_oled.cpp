@@ -29,7 +29,7 @@ void M_oled::beginOled()
   display_oled.clearDisplay();
 
   // texte en blanc
-  display_oled.setTextColor(SSD1306_WHITE);
+  display_oled.setTextColor(WHITE);
 }
 
 
@@ -47,11 +47,11 @@ void M_oled::displayText(const char * texteAAfficher, int taillePolice, bool vid
 {
   if (inverted)
   {
-	  display_oled.setTextColor(SSD1306_BLACK, SSD1306_WHITE);
+	  display_oled.setTextColor(SSD1306_BLACK, WHITE);
   }
   else
   {
-	  display_oled.setTextColor(SSD1306_WHITE, SSD1306_BLACK);
+	  display_oled.setTextColor(WHITE, SSD1306_BLACK);
   }
   
   if (videEcran)
@@ -91,12 +91,12 @@ void M_oled::displayText(const char * texteAAfficher, int taillePolice, bool vid
 
 void M_oled::displayRect(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h)
 {
-	display_oled.drawRect(x0, y0, w, h, SSD1306_WHITE);
+	display_oled.drawRect(x0, y0, w, h, WHITE);
 }
 
 void M_oled::displayFillRect(uint16_t x0, uint16_t y0, uint16_t w, uint16_t h)
 {
-	display_oled.fillRect(x0, y0, w, h, SSD1306_WHITE);
+	display_oled.fillRect(x0, y0, w, h, WHITE);
 }
 
 void M_oled::display()
@@ -112,12 +112,12 @@ void M_oled::clearDisplay()
 
 void M_oled::displayCircle(uint16_t x0, uint16_t y0, uint16_t r)
 {
-	display_oled.drawCircle(x0, y0, r, SSD1306_WHITE);
+	display_oled.drawCircle(x0, y0, r, WHITE);
 }
 
 void M_oled::displayFillCircle(uint16_t x0, uint16_t y0, uint16_t r)
 {
-	display_oled.fillCircle(x0, y0, r, SSD1306_WHITE);
+	display_oled.fillCircle(x0, y0, r, WHITE);
 }
 
 void M_oled::updateAnimation()
